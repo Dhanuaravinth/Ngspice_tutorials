@@ -1,0 +1,11 @@
+.title KiCad schematic
+D1 a b 1N4007
+R1 c b 10
+R2 c 0 10
+V1 a 0 sin(0 100 50 0 0)
+.model 1N4007 D()
+.control
+tran 1us 40ms uic
+plot v(a) v(c)
+.endc
+.end

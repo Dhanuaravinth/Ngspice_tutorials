@@ -1,0 +1,112 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Diode:1N4007 D1
+U 1 1 6001621D
+P 1900 1500
+F 0 "D1" H 1900 1284 50  0000 C CNN
+F 1 "1N4007" H 1900 1375 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1900 1325 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1900 1500 50  0001 C CNN
+F 4 "D" H 1900 1500 50  0001 C CNN "Spice_Primitive"
+F 5 "1N4007" H 1900 1500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1900 1500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1900 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 600163E7
+P 2600 1500
+F 0 "R1" V 2393 1500 50  0000 C CNN
+F 1 "10" V 2484 1500 50  0000 C CNN
+F 2 "" V 2530 1500 50  0001 C CNN
+F 3 "~" H 2600 1500 50  0001 C CNN
+	1    2600 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6001642B
+P 3050 1950
+F 0 "R2" H 3120 1996 50  0000 L CNN
+F 1 "10" H 3120 1905 50  0000 L CNN
+F 2 "" V 2980 1950 50  0001 C CNN
+F 3 "~" H 3050 1950 50  0001 C CNN
+	1    3050 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 600164EB
+P 1550 1950
+F 0 "V1" H 1778 1996 50  0000 L CNN
+F 1 "sin(0 100 50 0 0)" H 1778 1905 50  0000 L CNN
+F 2 "" H 1550 1950 50  0001 C CNN
+F 3 "~" H 1550 1950 50  0001 C CNN
+	1    1550 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1650 1550 1500
+Wire Wire Line
+	1550 1500 1750 1500
+Wire Wire Line
+	2050 1500 2250 1500
+Wire Wire Line
+	2750 1500 3050 1500
+Wire Wire Line
+	3050 1500 3050 1800
+Wire Wire Line
+	3050 2100 3050 2350
+Wire Wire Line
+	3050 2350 2300 2350
+Wire Wire Line
+	1550 2350 1550 2250
+$Comp
+L pspice:0 #GND0101
+U 1 1 60016663
+P 2300 2500
+F 0 "#GND0101" H 2300 2400 50  0001 C CNN
+F 1 "0" H 2250 2550 50  0000 C CNN
+F 2 "" H 2300 2500 50  0001 C CNN
+F 3 "~" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2500 2300 2350
+Connection ~ 2300 2350
+Wire Wire Line
+	2300 2350 1550 2350
+Text GLabel 1550 1400 1    50   Input ~ 0
+a
+Text GLabel 2250 1400 1    50   Input ~ 0
+b
+Text GLabel 3050 1400 1    50   Input ~ 0
+c
+Wire Wire Line
+	1550 1400 1550 1500
+Connection ~ 1550 1500
+Wire Wire Line
+	2250 1400 2250 1500
+Connection ~ 2250 1500
+Wire Wire Line
+	2250 1500 2450 1500
+Wire Wire Line
+	3050 1400 3050 1500
+Connection ~ 3050 1500
+$EndSCHEMATC
