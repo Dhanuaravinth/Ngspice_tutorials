@@ -1,0 +1,21 @@
+.title KiCad schematic
+D1 d e 1N4007
+D2 0 d 1N4007
+D3 b e 1N4007
+D4 0 b 1N4007
+L1 a c 0.01uH
+R1 c d 0.1m
+R2 0 o 25
+C1 o 0 1000uF
+V1 a b SIN(0 325 50 0 0 0)
+L2 e o 1uH
+.model 1N4007 D()
+.control
+option reltol=0.01 abstol=0.01 vntol=0.01
+tran 50us 100ms uic
+run
+set color0 = white  ; set background color to white
+set color1 = black  ; set foreground color to black
+plot v(a,b) v(o) i(v1)
+.endc
+.end
