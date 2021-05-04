@@ -1,8 +1,0 @@
-1) Vtf(V) -Voltage describing VBC dependence of TF
-2) Cjc(F) - B-C zero-bias depletion capacitance (area is ‘areab’ for vertical devices and ‘areac’ for lateral)
-3) Nc - B-C leakage emission coefficient
-4) Tr(sec) - Ideal reverse transit time
-5) Ne - B-E leakage emission coefficient
-6) Cje(F) - B-E zero-bias depletion capacitance
-7) Vjc(V) - B-C built-in potential
-8) 
