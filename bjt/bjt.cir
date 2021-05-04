@@ -9,7 +9,7 @@ R1 b bb 1k
 + Ikf=.2847 Br=6.092 Mje=.377 Mjc=.3416 Vaf=74.03
 + Isc=0 Ise=14.34f Xtf=3 Vje=.75 Is=14.34f
 + Itf=.6 Eg=1.14 )
-.dc V2 0 10 0.1 V2 0 10 1
+.dc V2 0 10 0.1 V1 0 10 1
 .control
 run
 plot -i(v2)
